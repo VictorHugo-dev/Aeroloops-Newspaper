@@ -665,4 +665,9 @@ footer {
 
 .dark-theme .article-quote cite {
     color: var(--secondary-text-dark);
+}
+
+.articles h2 {
+    text-align: center;
+    margin-bottom: 2rem;
 } 
