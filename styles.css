@@ -243,6 +243,18 @@ header {
     transition: transform 0.3s ease;
 }
 
+.article-image .image-subtitle {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 4px 8px;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
 .article-card:hover .article-image img {
     transform: scale(1.05);
 }
