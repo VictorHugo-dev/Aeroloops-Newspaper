@@ -360,13 +360,57 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.5rem;
-    text-align: left;
+    display: grid;
+    grid-template-columns: auto 1px auto;
+    gap: 2rem;
+    align-items: start;
 }
 
+.footer-divider {
+    width: 1px;
+    height: 100%;
+    background-color: var(--border-color-light);
+    min-height: 100px;
+}
+
+.dark-theme .footer-divider {
+    background-color: var(--border-color-dark);
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-links a {
+    color: var(--text-color-light);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    font-size: 0.9rem;
+}
+
+.dark-theme .footer-links a {
+    color: var(--text-color-dark);
+}
+
+.footer-links a:hover {
+    color: #007AFF;
+}
+
+.footer-text {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color-light);
+}
+
+.dark-theme .footer-text {
+    border-top-color: var(--border-color-dark);
+}
+
+/* Social links */
 .social-links {
     display: flex;
     flex-direction: column;
@@ -400,16 +444,6 @@ footer {
     height: 18px;
     margin-right: 0.5rem;
     flex-shrink: 0;
-}
-
-.footer-text {
-    width: 100%;
-    text-align: center;
-    margin-top: 1rem;
-}
-
-.dark-theme .footer-text {
-    color: var(--secondary-text-dark);
 }
 
 /* Subscribe form */
@@ -686,4 +720,125 @@ footer {
 /* Keep the icon light in dark theme */
 .dark-theme .bsky-icon {
     filter: none;
+}
+
+/* Copyright page styles */
+.copyright-section {
+    padding: 4rem 0;
+}
+
+.copyright-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.copyright-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.copyright-content h2 {
+    font-size: 1.8rem;
+    margin: 2.5rem 0 1.5rem;
+    color: var(--text-color-light);
+}
+
+.dark-theme .copyright-content h2 {
+    color: var(--text-color-dark);
+}
+
+.image-credits {
+    margin-bottom: 2rem;
+}
+
+.credit-item {
+    background-color: var(--hover-bg-light);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.dark-theme .credit-item {
+    background-color: var(--hover-bg-dark);
+}
+
+.credit-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color-light);
+}
+
+.dark-theme .credit-item h3 {
+    color: var(--text-color-dark);
+}
+
+.credit-item p {
+    color: var(--secondary-text-light);
+    margin-bottom: 1rem;
+}
+
+.dark-theme .credit-item p {
+    color: var(--secondary-text-dark);
+}
+
+.credit-item ul {
+    list-style: none;
+    padding: 0;
+}
+
+.credit-item li {
+    margin-bottom: 0.5rem;
+    color: var(--secondary-text-light);
+}
+
+.dark-theme .credit-item li {
+    color: var(--secondary-text-dark);
+}
+
+.copyright-notice {
+    margin-top: 3rem;
+    padding: 2rem;
+    border-top: 1px solid var(--border-color-light);
+}
+
+.dark-theme .copyright-notice {
+    border-top-color: var(--border-color-dark);
+}
+
+.copyright-notice p {
+    color: var(--secondary-text-light);
+    line-height: 1.8;
+}
+
+.dark-theme .copyright-notice p {
+    color: var(--secondary-text-dark);
+}
+
+.photographer-credit {
+    margin-bottom: 1.5rem;
+}
+
+.photographer-credit:last-child {
+    margin-bottom: 0;
+}
+
+.photographer-credit h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color-light);
+}
+
+.dark-theme .photographer-credit h4 {
+    color: var(--text-color-dark);
+}
+
+.photographer-credit a {
+    color: #007AFF;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.photographer-credit a:hover {
+    color: #0056b3;
 } 
