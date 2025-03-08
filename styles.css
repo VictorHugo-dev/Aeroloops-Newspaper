@@ -393,6 +393,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    align-items: flex-start;
 }
 
 .footer-links a {
@@ -400,6 +401,7 @@ footer {
     text-decoration: none;
     transition: color 0.2s ease;
     font-size: 0.9rem;
+    padding: 0.25rem 0;
 }
 
 .dark-theme .footer-links a {
@@ -984,4 +986,29 @@ footer {
 
 .photographer-credit a:hover {
     color: #0056b3;
+}
+
+.media-links {
+    margin-top: 3rem;
+    padding: 2rem;
+    border-top: 1px solid var(--border-color-light);
+}
+
+.dark-theme .media-links {
+    border-top-color: var(--border-color-dark);
+}
+
+.media-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    background-color: #007AFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.media-link:hover {
+    background-color: #0056b3;
 } 

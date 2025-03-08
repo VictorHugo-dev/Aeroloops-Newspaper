@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Card - Aeroloops</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <style>
+        .media-card {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--bg-color-light);
+            transition: background-color 0.3s;
+        }
+
+        .dark-theme .media-card {
+            background-color: var(--bg-color-dark);
+        }
+
+        .media-logo {
+            width: 1200px;
+            margin-bottom: 2rem;
+        }
+
+        .dark-theme .media-logo {
+            filter: brightness(0) invert(1);
+        }
+
+        .social-icons {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            transition: transform 0.2s ease;
+        }
+
+        .social-icons a:hover {
+            transform: translateY(-2px);
+        }
+
+        .icon-divider {
+            width: 2px;
+            height: 24px;
+            background-color: var(--border-color-light);
+        }
+
+        .dark-theme .icon-divider {
+            background-color: var(--border-color-dark);
+        }
+
+        .social-icon {
+            width: 24px;
+            height: 24px;
+            color: var(--text-color-light);
+        }
+
+        .dark-theme .social-icon {
+            color: var(--text-color-dark);
+        }
+
+        .bsky-icon {
+            width: 24px;
+            height: 24px;
+            filter: brightness(0.2);
+        }
+
+        .dark-theme .bsky-icon {
+            filter: brightness(0) invert(1);
+        }
+
+        .globe-icon {
+            width: 24px;
+            height: 24px;
+            color: var(--text-color-light);
+        }
+
+        .dark-theme .globe-icon {
+            color: var(--text-color-dark);
+        }
+    </style>
+</head>
+<body class="light-theme">
+    <div class="media-card">
+        <img src="../Aeroloops No Background.png" alt="Aeroloops" class="media-logo">
+        <div class="social-icons">
+            <a href="https://bsky.app/profile/aeroloops.bsky.social" target="_blank" rel="noopener noreferrer">
+                <img src="BlueSky.svg" alt="Bluesky" class="bsky-icon">
+            </a>
+            <div class="icon-divider"></div>
+            <a href="https://aeroloops.com.br" target="_blank" rel="noopener noreferrer">
+                <svg class="globe-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+            </a>
+            <div class="icon-divider"></div>
+            <a href="https://twitter.com/aeroloops" target="_blank" rel="noopener noreferrer">
+                <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
