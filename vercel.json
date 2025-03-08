@@ -1,0 +1,16 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/direitos-autorais.html",
+      "destination": "/direitos-autorais",
+      "permanent": true
+    },
+    {
+      "source": "/articles/buddha-at72.html",
+      "destination": "/articles/buddha-at72",
+      "permanent": true
+    }
+  ]
+} 
