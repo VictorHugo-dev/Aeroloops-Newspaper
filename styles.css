@@ -567,43 +567,174 @@ footer {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+    /* Header adjustments */
+    .nav-container {
+        padding: 0.5rem 1rem;
+    }
+
+    .logo-img {
+        height: 80px; /* Smaller logo on mobile */
+    }
+
+    .nav-right {
+        margin-right: 0;
+        gap: 0.5rem;
+    }
+
+    /* Hero section adjustments */
+    .hero {
+        padding: 2rem 0;
+    }
+
     .hero h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        line-height: 1.3;
+        padding: 0 1rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+    }
+
+    /* Articles section adjustments */
+    .articles {
+        padding: 1rem 0;
+    }
+
+    .articles h2 {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
     }
 
     .articles-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1rem 0;
+    }
+
+    .article-card {
+        margin: 0 1rem;
+    }
+
+    .article-title {
+        font-size: 1.2rem;
+    }
+
+    /* Footer adjustments */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+
+    .footer-divider {
+        width: 100%;
+        height: 1px;
+        min-height: 0;
+        margin: 0.5rem 0;
+    }
+
+    .social-links {
+        margin-left: 0;
+        align-items: center;
+    }
+
+    .footer-links {
+        align-items: center;
+    }
+
+    /* Modal adjustments */
+    .modal-content {
+        margin: 0 1rem;
+        padding: 1.5rem;
+    }
+
+    .modal-content h2 {
+        font-size: 1.4rem;
+    }
+
+    /* Copyright page adjustments */
+    .copyright-section {
+        padding: 2rem 0;
+    }
+
+    .copyright-section h1 {
+        font-size: 1.8rem;
+        padding: 0 1rem;
+    }
+
+    .credit-item {
+        margin: 0 1rem 1rem;
+        padding: 1rem;
+    }
+
+    .photographer-credit h4 {
+        font-size: 1rem;
+    }
+
+    .photographer-credit ul {
+        font-size: 0.9rem;
+    }
+
+    /* Article page adjustments */
+    .article-header {
+        margin: 2rem 0;
+        padding: 0 1rem;
     }
 
     .article-header h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     article .article-content {
         padding: 0 1rem;
     }
 
-    .form-group {
-        flex-direction: column;
-        padding: 0 1rem;
+    .article-image-container {
+        margin: 1.5rem -1rem;
+    }
+
+    .article-full-image {
+        border-radius: 0;
+    }
+
+    /* Touch target improvements */
+    .social-link {
+        padding: 0.5rem;
+        margin: 0.25rem 0;
+    }
+
+    .footer-links a {
+        padding: 0.5rem;
+        display: inline-block;
     }
 
     .subscribe-btn {
-        width: 100%;
+        padding: 0.7rem 1rem;
+        min-height: 44px; /* Better touch target */
     }
 
-    .social-links {
-        gap: 1rem;
+    #theme-toggle {
+        padding: 10px;
+        min-height: 44px; /* Better touch target */
+        min-width: 44px;
     }
-    
+}
+
+/* Additional improvements for very small screens */
+@media (max-width: 360px) {
+    .hero h2 {
+        font-size: 1.6rem;
+    }
+
+    .nav-right .subscribe-btn {
+        font-size: 0.8rem;
+        padding: 0.5rem 0.8rem;
+    }
+
     .social-link {
-        font-size: 0.9rem;
-    }
-    
-    .social-link svg {
-        width: 20px;
-        height: 20px;
-        margin-right: 0.5rem;
+        font-size: 0.85rem;
     }
 }
 
