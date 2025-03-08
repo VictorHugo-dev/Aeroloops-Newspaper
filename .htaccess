@@ -1,6 +1,6 @@
  RewriteEngine on
 
-# Redirect from .html to non-.html (301 permanent redirect)
+# Redirect from .html to non-.html (302 permanent redirect)
 RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
 RewriteRule ^ /%1 [NC,L,R=301]
 
