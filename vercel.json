@@ -11,6 +11,11 @@
       "source": "/articles/buddha-at72.html",
       "destination": "/articles/buddha-at72",
       "permanent": true
+    },
+    {
+      "source": "/articles/voepass-anac.html",
+      "destination": "/articles/voepass-anac",
+      "permanent": true
     }
   ]
 } 
