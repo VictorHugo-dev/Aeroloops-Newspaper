@@ -16,6 +16,12 @@
       "source": "/articles/voepass-anac.html",
       "destination": "/articles/voepass-anac",
       "permanent": true
+    },
+    {
+      "source": "/articles/lhr-incendio.html",
+      "destination": "/articles/lhr-incendio",
+      "permanent": true
     }
   ]
+
 } 
