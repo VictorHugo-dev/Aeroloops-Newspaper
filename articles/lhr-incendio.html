@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incendio nas proximidades no maior aeroporto da Europa - Aeroloops</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+    <style>
+        #map {
+            width: 100%;
+            height: 400px;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            z-index: 1;
+        }
+    </style>
+</head>
+<body class="light-theme">
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="../index">
+                        <img src="../../Aeroloops No Background.png" alt="Aeroloops" class="logo-img">
+                    </a>
+                </div>
+                <div class="nav-right">
+                    <button id="theme-toggle" aria-label="Toggle theme">
+                        <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <article class="container">
+            <header class="article-header">
+                <h1>Incendio nas proximidades no maior aeroporto da Europa</h1>
+                <div class="article-meta">
+                    <span>22 de março de 2025</span>
+                    <span>·</span>
+                    <span>5 min de leitura</span>
+                </div>
+            </header>
+
+            <div class="article-content">
+                <p>Um incendio iniciado na madrugada da quinta-feira (20/03), em uma subestação de energia (North Hyde Electricity Substation) localizada a 3,2km do aeroporto, a qual fornecia energia ao aeroporto de Londres.</p>
+                <p>A North Hyde Electricity Substation localizada em Hayes, Londres, a subestação era responsável pelo abastecimento energetico de Heathrow. Moradores da região relataram uma explosão e "bolas de fogo". De acordo com a London Fire Brigade (LFB), um transformador carregando 25 mil litros de óleo de arrefecimento incendiou-se.</p>
+
+                <div id="map" style="width: 100%; height: 400px; margin: 20px 0;"></div>
+                <p class="map-caption" style="text-align: center; color: #666; font-size: 14px; margin-top: -15px; margin-bottom: 20px;">Mapa do OpenStreetMap</p>
+
+                <p>O fogo causou o desligamento das operações de Heathrow por aproximadamente 17 horas. No ano de 2024, o aeroporto movimentou 83,8 milhões de passageiros, o que representa uma estimativa de 232 mil passageiros por dia. Assim pode-se calcular que ao menos 200 mil viajantes foram afetados. Se considera que pelo menos 1.000 voos foram afetados, tanto como cancelados ou desviados, para Gatwick, Manchester, Charles de Gaulle e Shannon, na Irlanda.</p>
+
+                <div class="article-image-container">
+                    <img src="../../Plane Images/787BA.jpg" alt="ATR 72 da Voepass" class="article-full-image">
+                    <p class="image-caption">787 da British Airways, baseada em Londres - 📷: @eric.airplanes</p>
+                </div>
+
+                <p>O motivo pelo qual o fogo se iniciou ainda não é conhecido, mas tanto a LFB quanto a Policia Metropolitana estão em investigação. A operação foi retomada após 17 horas, na manhã de sábado (22/03) as 7 da manhã (GMT - 4 da manhã no Brasil).</p>
+                <h3>Porque o London Heathrow não tinha backup?</h3>
+                <p>O London Heathrow é o aeroporto mais movimentado da Europa, e é considerado um dos mais importantes aeroportos do mundo. Porém, apesar de toda infraestrutura, não há possibilidade de um sistema de backup para abastecer o aeroporto inteiro.</p>
+
+                <p>Não houve vitimas, nem feridos.</p>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://twitter.com/aeroloops" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                    <span>Siga a gente no X!</span>
+                </a>
+                <a href="https://bsky.app/profile/aeroloops.bsky.social" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <img src="../BlueSky.svg" alt="Bluesky" class="bsky-icon">
+                    <span>Siga a gente no Bluesky!</span>
+                </a>
+                <a href="mailto:contact@aeroloops.com.br" class="social-link">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                    <span>Email de contato: contact@aeroloops.com.br</span>
+                </a>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-links">
+                <a href="../direitos-autorais">Direitos Autorais</a>
+                <a href="../media-card">Media Card</a>
+            </div>
+            <p class="footer-text">&copy; 2025 Aeroloops. Todos direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    
+    <script>
+        // Initialize the map with dark theme
+        const map = L.map('map').setView([51.4800, -0.4371], 12);
+
+        // Add dark theme tiles from CartoDB
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+            attribution: '©OpenStreetMap, ©CartoDB',
+            maxZoom: 19
+        }).addTo(map);
+
+        // Function to create a callout marker
+        function createCalloutMarker(coordinates, labelText, color = '#ffffff') {
+            // Create outer glow
+            const outerGlow = L.circleMarker(coordinates, {
+                radius: 12,
+                fillColor: color,
+                fillOpacity: 0.2,
+                color: color,
+                weight: 1,
+                opacity: 0.5
+            }).addTo(map);
+
+            // Create inner dot
+            const dot = L.circleMarker(coordinates, {
+                radius: 6,
+                fillColor: color,
+                color: color,
+                weight: 2,
+                opacity: 1,
+                fillOpacity: 1
+            }).addTo(map);
+
+            // Create center point
+            const centerDot = L.circleMarker(coordinates, {
+                radius: 2,
+                fillColor: '#ffffff',
+                color: '#ffffff',
+                weight: 1,
+                opacity: 1,
+                fillOpacity: 1
+            }).addTo(map);
+
+            // Calculate end point for line (offset to the right)
+            const offsetX = 100; // pixels
+            const offsetY = -20; // pixels
+            const point = map.latLngToContainerPoint(coordinates);
+            const endPoint = map.containerPointToLatLng([
+                point.x + offsetX,
+                point.y + offsetY
+            ]);
+
+            // Create line
+            const line = L.polyline([coordinates, endPoint], {
+                color: color,
+                weight: 2,
+                opacity: 0.8
+            }).addTo(map);
+
+            // Add label
+            const label = L.divIcon({
+                className: 'map-label',
+                html: `<div style="color: ${color}; font-weight: 500; font-size: 14px; 
+                       background: rgba(0,0,0,0.5); padding: 4px 8px; border-radius: 4px;">
+                       ${labelText}</div>`,
+                iconSize: [200, 40],
+                iconAnchor: [-95, 30]
+            });
+
+            L.marker(endPoint, {
+                icon: label,
+                interactive: false
+            }).addTo(map);
+        }
+
+        // Add custom CSS for labels
+        const style = document.createElement('style');
+        style.textContent = `
+            .map-label {
+                background: transparent;
+                border: none;
+                box-shadow: none;
+            }
+            .map-label div {
+                white-space: nowrap;
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Function to calculate distance between two points in kilometers
+        function calculateDistance(latlng1, latlng2) {
+            return (map.distance(latlng1, latlng2) / 1000).toFixed(1);
+        }
+
+        // Create markers with callouts
+        const heathrowCoords = [51.4700, -0.4543];
+        const substationCoords = [51.4900, -0.4200];
+        
+        createCalloutMarker(heathrowCoords, 'London Heathrow Airport', '#3498db');
+        createCalloutMarker(substationCoords, 'North Hyde Electricity Substation', '#e74c3c');
+
+        // Create line between points
+        const distanceKm = calculateDistance(heathrowCoords, substationCoords);
+        
+        // Add the connecting line with distance label
+        const connectionLine = L.polyline([heathrowCoords, substationCoords], {
+            color: '#FFD700',
+            weight: 3,
+            opacity: 0.8,
+            dashArray: '10, 10'
+        }).addTo(map);
+
+        // Add distance label in the middle of the line
+        const midPoint = L.latLng(
+            (heathrowCoords[0] + substationCoords[0]) / 2,
+            (heathrowCoords[1] + substationCoords[1]) / 2
+        );
+
+        const distanceLabel = L.divIcon({
+            className: 'distance-label',
+            html: `<div style="background: rgba(0,0,0,0.7); color: #FFD700; 
+                   padding: 4px 8px; border-radius: 4px; font-size: 12px;">
+                   ${distanceKm} km</div>`,
+            iconSize: [80, 30],
+            iconAnchor: [40, 15]
+        });
+
+        L.marker(midPoint, {
+            icon: distanceLabel,
+            interactive: false
+        }).addTo(map);
+
+        // Add custom CSS for the distance label
+        style.textContent += `
+            .distance-label {
+                background: transparent;
+                border: none;
+                box-shadow: none;
+            }
+            .distance-label div {
+                white-space: nowrap;
+                text-align: center;
+            }
+        `;
+
+        // Add scale control with white text
+        const scale = L.control.scale().addTo(map);
+        scale.getContainer().style.color = 'white';
+
+        // Add zoom control
+        L.control.zoom({
+            position: 'topright'
+        }).addTo(map);
+    </script>
+</body>
+</html> 
