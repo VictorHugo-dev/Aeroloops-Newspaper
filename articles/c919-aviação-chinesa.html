@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C919: O futuro da aviação chinesa - Aeroloops</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+<body class="light-theme">
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="../index">
+                        <img src="../../Aeroloops No Background.png" alt="Aeroloops" class="logo-img">
+                    </a>
+                </div>
+                <div class="nav-right">
+                    <button id="theme-toggle" aria-label="Toggle theme">
+                        <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <article class="container">
+            <header class="article-header">
+                <h1>C919: O futuro da aviação chinesa</h1>
+                <div class="article-meta">
+                    <span>30 de março de 2025</span>
+                    <span>·</span>
+                    <span>5 min de leitura</span>
+                </div>
+            </header>
+
+            <div class="article-content">
+                <p>O avião C919, um narrow-body da fabricante chinesa COMAC. A letra 'C' no nome da aeronave representa COMAC e China. Também pode-se fazer um acrônimo 'ABC' de Airbus, Boeing e COMAC. O futuro da aviação chinesa é promissor, a COMAC, por agora, tem 4 aeronaves: 2 já em produção (C909 e C919) e as outras 2 ainda são planos (C929 e C939).</p>
+                <p>O C919, está no mercado para competir com o 737 e o A320. Como dito anteriormente, o acrônimo 'ABC' indica que a COMAC está disposta a competir globalmente, com as duas gigantes da aviação. </p>
+
+
+                <div class="article-image-container">
+                    <img src="../../Plane Images/A320LATAM.jpg" alt="A320 da LATAM" class="article-full-image">
+                    <p class="image-caption">📷: @eric.airplanes - A320 da LATAM</p>
+                </div>
+
+                <p>Apesar de terem as mesmas propostas, o C919 possui algumas diferenças. Como seu alcance, que é de 3.000nm, enquanto pode parecer pouco em relação aos competidores, o C919 foi idealizado para o mercado chinês, e oferecer independencia de mercado às linhas aéreas. Em que as rotas feitas na China domesticamente, não são longas o suficiente para que o C919 seja uma aeronave perfeita.</p>
+
+                <div class="range-comparison">
+                    <h3>Comparação de Alcance</h3>
+                    <div class="bar-graph">
+                        <div class="bar-container">
+                            <div class="bar" style="width: 84.5%;">
+                                <span class="bar-label">COMAC C919</span>
+                                <span class="bar-value">3,000 NM</span>
+                            </div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 100%;">
+                                <span class="bar-label">Boeing 737-8</span>
+                                <span class="bar-value">3,550 NM</span>
+                            </div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 93%;">
+                                <span class="bar-label">Airbus A320ceo</span>
+                                <span class="bar-value">3,300 NM</span>
+                            </div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 98.6%;">
+                                <span class="bar-label">Airbus A320neo</span>
+                                <span class="bar-value">3,500 NM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p>Embora o C919 foi desenhado para o mercado chinês, ele vem atraindo olhares de compradores de todo o mundo. Como a Ryanair, uma linha aérea low-cost da Europa. Em uma entrevista, ao portal de noticias Skift, o CEO da Ryanair, Michael O'Leary, afirmou:</p>
+
+                <blockquote class="article-quote">
+                    <p>"Ultimately the aircraft will be certified. We're always focused on buying aircraft at the lowest possible price and at the most opportune time. I don't care who makes them, whether it's Boeing, Airbus, or Comac. As long as the price is right, we'd buy it"</p>
+                    <cite>- Michael O'Leary em uma entrevista ao portal de noticias Skift</cite>
+                </blockquote>
+                
+                <p>O que indica um interesse por parte da Ryanair nas aeronaves, as quais estiverem com o menor preço. Desse modo que a Ryanair, está preocupada com o lucro, e não com a marca da aeronave. O seguinte gráfico mostra os preços de mercado das principais aeronaves.</p>
+
+                <div class="price-comparison">
+                    <h3>Comparação de valores de mercado</h3>
+                    <div class="price-graph">
+                        <div class="price-bar-container">
+                            <div class="price-label">C919</div>
+                            <div class="price-bar" style="height: 82.7%;">
+                                <span class="price-value">$45.5M</span>
+                            </div>
+                        </div>
+                        <div class="price-bar-container">
+                            <div class="price-label">737 MAX</div>
+                            <div class="price-bar" style="height: 98.2%;">
+                                <span class="price-value">$54M</span>
+                            </div>
+                        </div>
+                        <div class="price-bar-container">
+                            <div class="price-label">A320neo</div>
+                            <div class="price-bar" style="height: 100%;">
+                                <span class="price-value">$55M</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="source-button-container">
+                        <a href="https://bit.ly/FonteCOMACNews" target="_blank" rel="noopener noreferrer" class="source-button">
+                            Fonte
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <p>De acordo com o gráfico acima, pode-se perceber que o C919 possui um preço de aproximadamente 17% menor que o 737 MAX e o A320neo. Voltando em relação ao C919 ter um alcance de 3.000nm, o que pode ser considerado pequeno, mas já é mais que o suficiente para a China. O seguinte mapa mostra as princiapas rotas domesticas do pais:</p>
+
+                <div class="map-section">
+                    <h3>Principais rotas domésticas na China</h3>
+                    <div id="china-routes-map"></div>
+                    <div class="route-legend">
+                        <div class="legend-item">
+                            <span class="legend-color" style="background: #FF4B4B;"></span>
+                            <span>Pequim - Xangai</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color" style="background: #4CAF50;"></span>
+                            <span>Pequim - Guangzhou</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color" style="background: #2196F3;"></span>
+                            <span>Xangai - Guangzhou</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color" style="background: #9C27B0;"></span>
+                            <span>Xangai - Shenzhen</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color" style="background: #FF9800;"></span>
+                            <span>Chengdu - Pequim</span>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Afinal o que resta para a Ryanair comprar o C919?</h3>
+
+                <p>Um grande desafio para que a COMAC consiga vender o C919 na Europa é a certificação da aeronave. A EASA (Agência Europeia de Aviação) é a responsável por certificar as aeronaves na Europa, a certificação da aeronave é um processo longo e caro.</p>
+
+                <p>A COMAC vem atraindo olhares da brasileira Total Linhas Aéreas, em que seu CEO afirmou interesse na compra de C919:</p>
+
+                <blockquote class="article-quote">
+                    <p>"Procurei a Comac, primeiramente, porque é um produto que tem disponibilidade imediata. Hoje, você não acha avião para comprar. Ou você pega avião velho, ou não pega. Só tem entrega prevista para 2027, 2028 e até mesmo 2029."</p>
+                    <cite>- Paulo Almada, Presidente da Total Linhas Aéreas</cite>
+                    <div class="source-button-container">
+                        <a href="https://bit.ly/COMACTotalNews" target="_blank" rel="noopener noreferrer" class="source-button">
+                            Fonte
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </blockquote>
+                
+                <p>Ademais, esperamos que a COMAC se torne o C no "AB".</p>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://twitter.com/aeroloops" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                    <span>Siga a gente no X!</span>
+                </a>
+                <a href="https://bsky.app/profile/aeroloops.bsky.social" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <img src="../BlueSky.svg" alt="Bluesky" class="bsky-icon">
+                    <span>Siga a gente no Bluesky!</span>
+                </a>
+                <a href="mailto:contact@aeroloops.com.br" class="social-link">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                    <span>Email de contato: contact@aeroloops.com.br</span>
+                </a>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-links">
+                <a href="../direitos-autorais">Direitos Autorais</a>
+                <a href="../media-card">Media Card</a>
+            </div>
+            <p class="footer-text">&copy; 2025 Aeroloops. Todos direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+        // Initialize the map
+        const map = L.map('china-routes-map').setView([35.8617, 104.1954], 5);
+        
+        // Add dark theme map tiles
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+            attribution: '© OpenStreetMap contributors, © CARTO'
+        }).addTo(map);
+
+        // Define airport coordinates and names
+        const airports = {
+            PEK: {
+                coords: [40.0799, 116.6031],
+                name: 'Pequim'
+            },
+            SHA: {
+                coords: [31.1979, 121.3363],
+                name: 'Xangai Hongqiao'
+            },
+            PVG: {
+                coords: [31.1443, 121.8083],
+                name: 'Xangai Pudong'
+            },
+            CAN: {
+                coords: [23.3959, 113.3079],
+                name: 'Guangzhou'
+            },
+            SZX: {
+                coords: [22.6395, 113.8145],
+                name: 'Shenzhen'
+            },
+            CTU: {
+                coords: [30.5785, 103.9471],
+                name: 'Chengdu'
+            }
+        };
+
+        // Draw routes with different colors
+        // Pequim - Xangai
+        L.polyline([airports.PEK.coords, airports.PVG.coords], {
+            color: '#FF4B4B',
+            weight: 3
+        }).addTo(map);
+
+        // Pequim - Guangzhou
+        L.polyline([airports.PEK.coords, airports.CAN.coords], {
+            color: '#4CAF50',
+            weight: 3
+        }).addTo(map);
+
+        // Xangai - Guangzhou
+        L.polyline([airports.PVG.coords, airports.CAN.coords], {
+            color: '#2196F3',
+            weight: 3
+        }).addTo(map);
+
+        // Xangai - Shenzhen
+        L.polyline([airports.PVG.coords, airports.SZX.coords], {
+            color: '#9C27B0',
+            weight: 3
+        }).addTo(map);
+
+        // Chengdu - Pequim
+        L.polyline([airports.CTU.coords, airports.PEK.coords], {
+            color: '#FF9800',
+            weight: 3
+        }).addTo(map);
+
+        // Add airport markers with Portuguese names
+        Object.entries(airports).forEach(([code, data]) => {
+            L.marker(data.coords)
+                .bindPopup(`${data.name} (${code})`)
+                .addTo(map);
+        });
+    </script>
+</body>
+</html> 
