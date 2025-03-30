@@ -21,6 +21,11 @@
       "source": "/articles/lhr-incendio.html",
       "destination": "/articles/lhr-incendio",
       "permanent": true
+    },
+    {
+      "source": "/articles/c919-aviação-chinesa.html",
+      "destination": "/articles/c919-aviação-chinesa",
+      "permanent": true
     }
   ]
 
