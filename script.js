@@ -72,4 +72,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     setInterval(updateText, 2000);
-}); 
+    
+    const blockwall = document.getElementById("blockwall");
+
+    // Disable scrolling when the blockwall is visible
+    if (blockwall) {
+        document.body.style.overflow = "hidden";
+    }
+});
