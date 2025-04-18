@@ -1308,35 +1308,3 @@ footer {
 .dark-theme .source-button {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
-
-.blockwall {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(8px);
-    background-color: rgba(0, 0, 0, 0.9); /* Dark background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000; /* Ensure it appears above all other content */
-    overflow: hidden; /* Prevent scrolling */
-}
-
-.blockwall-content {
-    text-align: center;
-    color: white; /* White text */
-    padding: 20px 40px;
-    border-radius: 8px;
-}
-
-.blockwall-content h1 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-}
-
-.blockwall-content p {
-    font-size: 1.2rem;
-    color: #ccc; /* Slightly lighter text for the paragraph */
-}
