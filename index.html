@@ -75,6 +75,8 @@
         </div>
     </div>
 
+    <div id="notification" class="notification"></div>
+
     <main>
         <section class="hero">
             <div class="container">
@@ -177,6 +179,13 @@
         const blockwall = document.getElementById('blockwall');
         if (blockwall) {
             document.body.style.overflow = 'hidden';
+
+            // Add a method to hide the blockwall
+            blockwall.hide = function () {
+                blockwall.style.display = 'none';
+                document.body.style.overflow = ''; // Restore scrolling
+                console.log('Blockwall hidden.');
+            };
         }
     </script>
 </body>

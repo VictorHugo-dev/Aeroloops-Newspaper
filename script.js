@@ -44,15 +44,46 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Function to show notification bubble
+    function showNotification(message, isError = false) {
+        const notification = document.getElementById('notification');
+        notification.textContent = message;
+        notification.className = 'notification'; // Reset classes
+        if (isError) {
+            notification.classList.add('error');
+        }
+        notification.classList.add('show');
+
+        // Hide the notification after 3 seconds
+        setTimeout(() => {
+            notification.classList.remove('show');
+        }, 3000);
+    }
+
     // Handle subscribe form submission
     if (subscribeForm) {
-        subscribeForm.addEventListener('submit', (e) => {
+        subscribeForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             const email = document.getElementById('email').value;
-            // Here you would typically send this to your backend
-            alert('Thank you for subscribing! We\'ll keep you updated with the latest aviation news.');
-            subscribeForm.reset();
-            closeModal();
+
+            try {
+                const response = await fetch('https://aeroloops-online.squareweb.app/subscribe', { // Replace with the backend's public URL
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email })
+                });
+
+                if (response.ok) {
+                    showNotification('Thank you for subscribing! We\'ll keep you updated with the latest aviation news.');
+                    subscribeForm.reset();
+                    closeModal();
+                } else {
+                    const error = await response.json();
+                    showNotification(error.message || 'An error occurred. Please try again.', true);
+                }
+            } catch (err) {
+                showNotification('Failed to connect to the server. Please try again later.', true);
+            }
         });
     }
 
